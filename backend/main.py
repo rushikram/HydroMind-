@@ -18,6 +18,12 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+@app.middleware("http")
+async def log_requests(request: Request, call_next):
+    print(f"⬅️ {request.method} {request.url}")
+    response = await call_next(request)
+    print(f"➡️ Status: {response.status_code}")
+    return response
 
 # Run on startup
 @app.on_event("startup")

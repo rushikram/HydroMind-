@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 
 # 🌐 Your FastAPI backend URL
-API_BASE = "https://hydromind.onrender.com"
+API_BASE = "https://hydromind-8rwu.onrender.com"
 
 st.set_page_config(page_title="HydroMind", layout="centered", page_icon="💧")
 st.title("💧 HydroMind: Your AI Hydration Coach")
